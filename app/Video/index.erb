@@ -1,0 +1,26 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Telugu NewsNow</h1>
+    <a href="<%= Rho::RhoConfig.start_path %>" class="ui-btn-left" data-icon="home" data-direction="reverse">Back</a>
+  </div>
+
+  <div data-role="content" data-theme="b">
+    <ul data-role="listview">
+      <% @videos.each do |video|
+         next unless video %>
+          <li>
+            <img src="http://img.youtube.com/vi/<%=video.url%>/2.jpg" /><br /><a href="<%= url_for :action => :show, :id => video.url %>" ><%= video.title %></a>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed" data-theme="b">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="<%= Rho::RhoConfig.start_path %>" data-icon="home" class="ui-state-persist ui-btn-active">Home</a></li>
+          <li><a href="<%= url_for :action => :index %>" data-icon="refresh">Refresh</a></li>
+        </ul>
+      <div>   
+  </div>
+</div>

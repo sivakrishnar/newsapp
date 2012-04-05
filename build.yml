@@ -1,0 +1,39 @@
+--- 
+extensions: 
+- json
+- another-extension
+- rhoxml
+name: TeluguNewsNow
+capabilities: 
+- internet
+wp: 
+  productid: a1e1ef50-b040-012e-50ea-00247e39db1a
+bbver: 4.6
+android: 
+  capabilities: 
+  - sdcard
+  - internet
+  version: 2.1
+  mapping: true
+sdk: C:/InstantRhodes/ruby/lib/ruby/gems/1.8/gems/rhodes-3.1.0
+applog: rholog.txt
+build: debug
+wmsdk: Windows Mobile 6 Professional SDK (ARMV4I)
+version: 1.0
+symbian: 
+  uid: "0xed1c1eea"
+vendor: rhomobile
+sdkversion: 3.1.0
+android:
+ production:
+    certificate: ./TeluguNewsNow.keystore
+    password: 101439siva
+    alias: NewsNow
+iphone: 
+  BundleURLScheme: newsapp
+  provisionprofile: 
+  BundleIdentifier: com.rhomobile.newsapp
+  sdk: iphonesimulator4.3
+  entitlements: 
+  codesignidentity: 
+  configuration: Release

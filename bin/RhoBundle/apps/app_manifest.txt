@@ -1,0 +1,6 @@
+Video/video
+Trailer/trailer
+Newsitem/newsitem
+News/news
+MovieReview/movie_review
+Headline/headline

@@ -1,0 +1,43 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @trailer.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">Cancel</a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @trailer.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="trailer[id]" class="fieldLabel">Id</label>
+            <input type="text" id="trailer[id]" name="trailer[id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="trailer[title]" class="fieldLabel">Title</label>
+            <input type="text" id="trailer[title]" name="trailer[title]" <%= placeholder("Title") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="trailer[url]" class="fieldLabel">Url</label>
+            <input type="text" id="trailer[url]" name="trailer[url]" <%= placeholder("Url") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="trailer[image_url]" class="fieldLabel">Image url</label>
+            <input type="text" id="trailer[image_url]" name="trailer[image_url]" <%= placeholder("Image url") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="trailer[created_at]" class="fieldLabel">Created at</label>
+            <input type="text" id="trailer[created_at]" name="trailer[created_at]" <%= placeholder("Created at") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

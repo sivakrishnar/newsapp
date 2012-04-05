@@ -1,0 +1,44 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @trailer.object %>
+    <h1>Edit <%= @trailer.id%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @trailer.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @trailer.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Id: </td>
+              <td class="itemValue"><input type="text" name="trailer[id]" value="<%= @trailer.id %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Title: </td>
+              <td class="itemValue"><input type="text" name="trailer[title]" value="<%= @trailer.title %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Url: </td>
+              <td class="itemValue"><input type="text" name="trailer[url]" value="<%= @trailer.url %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Image url: </td>
+              <td class="itemValue"><input type="text" name="trailer[image_url]" value="<%= @trailer.image_url %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Created at: </td>
+              <td class="itemValue"><input type="text" name="trailer[created_at]" value="<%= @trailer.created_at %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

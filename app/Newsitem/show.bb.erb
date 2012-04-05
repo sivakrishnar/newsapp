@@ -1,0 +1,45 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @newsitem.id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @newsitem.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @newsitem.id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Title</td>
+        <td class="itemValue"><%= @newsitem.title%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Author</td>
+        <td class="itemValue"><%= @newsitem.author%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">ImageUrl</td>
+        <td class="itemValue"><%= @newsitem.image_url%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Content</td>
+        <td class="itemValue"><%= @newsitem.content%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Created-at</td>
+        <td class="itemValue"><%= @newsitem.created-at%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

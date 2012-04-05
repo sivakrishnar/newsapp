@@ -1,0 +1,48 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @newsitem.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">Cancel</a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @newsitem.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="newsitem[id]" class="fieldLabel">Id</label>
+            <input type="text" id="newsitem[id]" name="newsitem[id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="newsitem[title]" class="fieldLabel">Title</label>
+            <input type="text" id="newsitem[title]" name="newsitem[title]" <%= placeholder("Title") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="newsitem[author]" class="fieldLabel">Author</label>
+            <input type="text" id="newsitem[author]" name="newsitem[author]" <%= placeholder("Author") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="newsitem[image_url]" class="fieldLabel">Image url</label>
+            <input type="text" id="newsitem[image_url]" name="newsitem[image_url]" <%= placeholder("Image url") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="newsitem[content]" class="fieldLabel">Content</label>
+            <input type="text" id="newsitem[content]" name="newsitem[content]" <%= placeholder("Content") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="newsitem[created-at]" class="fieldLabel">Created-at</label>
+            <input type="text" id="newsitem[created-at]" name="newsitem[created-at]" <%= placeholder("Created-at") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>
